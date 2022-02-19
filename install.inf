@@ -1,0 +1,11 @@
+[info]
+title=WikidPad Helper
+desc=For WikidPad lexer, handles double-click on CamelCaseWords, and opens that filename
+type=cudatext-plugin
+subdir=cuda_wikidpad_helper
+homepage=(Fill the GitHub repo URL)
+
+[item1]
+section=events
+events=on_click_dbl
+lexers=WikidPad
