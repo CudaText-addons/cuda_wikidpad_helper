@@ -17,11 +17,11 @@ class Command:
         if x>=len(line): return msg_status('Click after line end')
         
         ch = line[x]
-        if not ch.isalpha(): return msg_status('Click not on a word-char')
+        if not ch.isalnum(): return msg_status('Click not on a word-char')
         x1 = x
         x2 = x
-        while x1>0 and line[x1-1].isalpha(): x1-=1
-        while x2<len(line)-1 and line[x2+1].isalpha(): x2+=1
+        while x1>0 and line[x1-1].isalnum(): x1-=1
+        while x2<len(line)-1 and line[x2+1].isalnum(): x2+=1
         
         word = line[x1:x2+1]
         #print('word "'+word+'"')
