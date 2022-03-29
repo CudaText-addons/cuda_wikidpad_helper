@@ -1,4 +1,7 @@
 
+2022.03.29
+- fix: ignore escaped words like \CudaText
+
 2022.03.23
 - fix: disable handling click on e.g. 'Word'
 

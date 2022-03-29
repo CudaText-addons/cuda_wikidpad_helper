@@ -35,6 +35,8 @@ class Command:
         while x1>0 and line[x1-1].isalnum(): x1-=1
         while x2<len(line)-1 and line[x2+1].isalnum(): x2+=1
 
+        if x1>0 and line[x1-1]=='\\': return msg_status('Click on escaped word')
+
         word = line[x1:x2+1]
         #print('word "'+word+'"')
 
