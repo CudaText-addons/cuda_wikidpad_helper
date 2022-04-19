@@ -1,4 +1,7 @@
 
+2022.04.20
+- fix: dbl-click didn't work on word 'SBiS'
+
 2022.03.29
 - fix: ignore escaped words like \CudaText
 

@@ -6,8 +6,11 @@ def is_camel_case(s):
 
     if len(s)<3:
         return False
-    if not (s[0].isupper() and s[1].islower()):
+    if not s[0].isupper():
         return False
+    for i in range(len(s)-1):
+        if s[i].isupper() and s[i+1].islower():
+            return True
     for ch in s[2:]:
         if ch.isupper():
             return True
