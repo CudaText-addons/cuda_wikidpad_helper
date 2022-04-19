@@ -8,12 +8,13 @@ def is_camel_case(s):
         return False
     if not s[0].isupper():
         return False
+    # find 'Aa'
     for i in range(len(s)-1):
         if s[i].isupper() and s[i+1].islower():
-            return True
-    for ch in s[2:]:
-        if ch.isupper():
-            return True
+            # find 'aA' after position i
+            for j in range(i+1, len(s)-1):
+                if s[j].islower() and s[j+1].isupper():
+                    return True
     return False
 
 
